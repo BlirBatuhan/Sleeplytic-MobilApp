@@ -1,50 +1,149 @@
-# Welcome to your Expo app 👋
+# 🌙 Sleeplytic - Uyku Takip ve Analiz Uygulaması
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Sleeplytic**, kullanıcıların uyku kalitesini takip etmesi, AI destekli analiz alması ve uyku alışkanlıklarını iyileştirmesi için geliştirilmiş modern bir mobil uygulamadır.
 
-## Get started
+## 📱 Özellikler
 
-1. Install dependencies
+### 🎯 Ana Özellikler
+- **Uyku Ses Kaydı**: Gerçek zamanlı uyku süresi takibi ve ses kaydı
+- **AI Destekli Analiz**: Vosk ve Gemini AI ile uyku kalitesi analizi
+- **Kişiselleştirilmiş Danışmanlık**: AI tabanlı uyku tavsiyeleri
+- **İstatistik Raporları**: Detaylı uyku verileri ve trendler
+- **Günlük Tavsiyeler**: Rastgele uyku sağlığı önerileri
 
-   ```bash
-   npm install
-   ```
+### 🤖 AI Teknolojileri
+- **Vosk AI**: Offline ses analizi (horlama, nefes sorunları)
+- **Google Gemini API**: Kullanıcı sorularına yanıt ve kişisel tavsiyeler
+- **Akıllı Analiz**: Uyku kalitesi skorlama ve öneriler
 
-2. Start the app
+## 🛠️ Teknoloji Stack
 
-   ```bash
-    npx expo start
-   ```
+- **Framework**: React Native + Expo
+- **Platform**: iOS & Android
+- **Veritabanı**: AsyncStorage (Local Storage)
+- **AI Servisleri**: Vosk, Google Gemini API
+- **Ses İşleme**: expo-av
+- **Tarih İşlemleri**: date-fns
+- **Navigasyon**: Expo Router
 
-In the output, you'll find options to open the app in a
+## 📸 Uygulama Görüntüleri
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Ana Sayfa
+<img src="screenshots/ana-sayfa.png" width="300" alt="Ana Sayfa">
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+*Ana sayfa - Ay ve yıldız animasyonları, günlük tavsiyeler ve navigasyon butonları*
 
-## Get a fresh project
+### AI Danışman
+<img src="screenshots/ai-danisma.png" width="300" alt="AI Danışman">
 
-When you're ready, run:
+*AI Danışman - Uyku kayıtları seçimi ve soru-cevap sistemi*
 
+### İstatistikler
+<img src="screenshots/istatistikler.png" width="300" alt="İstatistikler">
+
+*İstatistikler - Haftalık özet ve detaylı uyku verileri*
+
+### AI Analiz
+<img src="screenshots/ai-analiz.png" width="300" alt="AI Analiz">
+
+*AI Analiz - Ses kayıtlarının yapay zeka ile analizi*
+
+## 🚀 Kurulum
+
+### Gereksinimler
+- Node.js (v16 veya üzeri)
+- npm veya yarn
+- Expo CLI
+- Expo Go uygulaması (mobil test için)
+
+### Kurulum Adımları
+
+1. **Projeyi klonlayın**
 ```bash
-npm run reset-project
+git clone https://github.com/BlirBatuhan/Sleeplytic-MobilApp.git
+cd Sleeplytic-MobilApp
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. **Bağımlılıkları yükleyin**
+```bash
+npm install
+```
 
-## Learn more
+3. **Uygulamayı başlatın**
+```bash
+npm start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. **Mobil cihazda test edin**
+   - Expo Go uygulamasını indirin
+   - QR kodu tarayın veya bağlantıyı kullanın
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## ⚙️ Konfigürasyon
 
-## Join the community
+### Gemini API Anahtarı
+`app/services/geminiService.js` dosyasında API anahtarınızı güncelleyin:
 
-Join our community of developers creating universal apps.
+```javascript
+const API_KEY = 'YOUR_GEMINI_API_KEY';
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### İzinler
+Uygulama aşağıdaki izinleri gerektirir:
+- Mikrofon erişimi (ses kaydı için)
+- Dosya sistemi erişimi (kayıt saklama için)
+
+## 📚 Kullanım
+
+1. **Kayıt Başlatma**: Ana sayfadan "Kayıt Başlat" butonuna basın
+2. **Uyku Takibi**: Uygulama otomatik olarak süreyi takip eder
+3. **AI Analizi**: Kayıtlarınızı analiz ettirmek için "AI Analiz" sayfasını kullanın
+4. **Danışmanlık**: "AI Danışman" ile uyku konularında soru sorun
+5. **İstatistikler**: "İstatistikler" sayfasında gelişiminizi takip edin
+
+## 🎨 Özellikler
+
+### Animasyonlar
+- Ay ve yıldız animasyonları (ana sayfa)
+- AI robot animasyonu (danışman sayfası)
+- Yumuşak geçiş efektleri
+
+### Tema
+- Modern karanlık tema
+- Uyku dostu renk paleti
+- Kullanıcı dostu arayüz
+
+## 🤝 Katkıda Bulunma
+
+1. Fork edin
+2. Feature branch oluşturun (`git checkout -b feature/yeni-ozellik`)
+3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
+4. Branch'inizi push edin (`git push origin feature/yeni-ozellik`)
+5. Pull Request oluşturun
+
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
+
+## 👨‍💻 Geliştirici
+
+**Batuhan Bir**
+- GitHub: [@BlirBatuhan](https://github.com/BlirBatuhan)
+
+## 🔮 Gelecek Özellikler
+
+- [ ] Cloud sync (bulut senkronizasyonu)
+- [ ] Çoklu kullanıcı desteği
+- [ ] Apple Health/Google Fit entegrasyonu
+- [ ] Detaylı uyku aşaması analizi
+- [ ] Sosyal özellikler ve paylaşım
+
+## 📞 Destek
+
+Herhangi bir sorun veya öneriniz için:
+- Issues açın
+- E-posta gönderin
+- Pull request oluşturun
+
+---
+
+⭐ Bu projeyi beğendiyseniz yıldız vermeyi unutmayın!
